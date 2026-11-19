@@ -1,0 +1,189 @@
+
+=== 1/6 字体子集（随包带字体；只核对不生成时用 --check） ===
+NotoSerifSC-Subset.ttf: 163 KB, 116 chars
+NotoSansSC-Subset.ttf: 116 KB, 116 chars
+
+=== 2/6 图版处理 ===
+her-face-lit       <- p-xiaolan-portrait                           (2400, 1350)
+board-wide         <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+panel-macro        <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+hands-plug         <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+her-board-back     <- Same_woman__same_face__same_ag_2026-11-18T21 (2400, 1350)
+window-snow        <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+laozhou-door       <- Black_and_white_35mm_film_stil_2026-11-19T02 (2400, 1350)
+form-seal          <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+headset-hook       <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+unused-sparkplug   <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+board-dead-lamp    <- Black_and_white_35mm_film_stil_2026-11-18T22 (2400, 1350)
+her-face-listening <- Same_woman__same_face__same_ag_2026-11-18T21 (2400, 1350)
+street-pole        <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+new-exchange       <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+lane-door          <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+mother-doorway     <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+two-hands          <- Black_and_white_35mm_film_stil_2026-11-19T02 (2400, 1350)
+walk-back          <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+headset-hands      <- Same_woman__same_face__same_ag_2026-11-18T21 (2400, 1350)
+board-dawn         <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+door-speak         <- Black_and_white_35mm_film_stil_2026-11-18T21 (2400, 1350)
+
+21 plates -> C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\plates
+
+=== 3/6 音轨 ===
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+HTTPS proxies https://127.0.0.1:7897 are not supported, ignoring
+  L01  S01 t=  1.2 dur=1.92s
+  L02  S05 t=  3.0 dur=4.20s
+  L03  S06 t=  1.0 dur=2.02s
+  L04  S06 t=  5.0 dur=3.86s
+  L05  S06 t=  9.5 dur=1.92s
+  L06  S06 t= 12.5 dur=1.68s
+  L07  S06 t= 15.0 dur=2.23s
+  L08  S08 t=  2.0 dur=5.14s
+  L09  S08 t=  8.0 dur=1.54s
+  L10  S08 t= 10.5 dur=1.44s
+  L11  S08 t= 13.0 dur=1.34s
+  L12  S08 t= 15.5 dur=4.13s
+  L13  S12 t=  0.8 dur=2.38s
+  L14  S12 t=  4.0 dur=1.49s
+  L15  S12 t=  6.0 dur=3.79s
+  L16  S12 t= 10.0 dur=5.62s
+  L17  S12 t= 16.2 dur=1.13s
+  L18  S13 t=  1.0 dur=2.81s
+  L19  S13 t=  4.0 dur=4.34s
+  L20  S13 t=  9.0 dur=2.47s
+  L21  S13 t= 13.0 dur=1.87s
+  L22  S17 t=  2.0 dur=5.04s
+  L23  S17 t=  8.0 dur=3.98s
+  L24  S18 t=  4.0 dur=2.38s
+  L25  S18 t=  9.0 dur=2.21s
+  L26  S19 t=  1.0 dur=2.64s
+  L27  S19 t=  5.0 dur=2.35s
+  L28  S19 t=  9.0 dur=3.82s
+  L29  S19 t= 13.2 dur=1.49s
+  L30  S21 t=  9.0 dur=1.94s
+C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\audio.wav  304.5s  peak=0.656
+
+=== 4/6 渲染 + 拼接 + 混流 ===
+[3/5] 渲染 7272 帧（24 fps，303.0 s）分 4 段，4 路并行
+  seg0 [0,1818) exit=0 C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\seg0.mp4  1818 frames  374.4s
+  seg1 [1818,3636) exit=0 C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\seg1.mp4  1818 frames  431.9s
+  seg2 [3636,5454) exit=0 C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\seg2.mp4  1818 frames  472.1s
+  seg3 [5454,7272) exit=0 C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\seg3.mp4  1818 frames  394.6s
+  渲染用时 472.5s
+[4/5] 拼接
+  $ ffmpeg -y -loglevel error -f concat -safe 0 -i C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\concat.txt -c copy C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\silent.mp4
+[5/5] 混流
+  $ ffmpeg -y -loglevel error -i C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\silent.mp4 -i C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\audio.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -ar 48000 -ac 2 -shortest C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\out\zongji.mp4
+完成 C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\out\zongji.mp4  294.3 MB  7272 帧 / 303.0 s
+
+=== 5/6 字幕 ===
+C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\out\zongji.srt  33 条
+
+=== 6/6 断言 ===
+《总机》交付物断言 — 分镜 23 镜 / 303.0 s / 上限 314 s
+
+一、规格
+  ✓ 成片存在 — C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\out\zongji.mp4
+  ✓ 文件不小（>50 MB） — 294.3 MB
+  ✓ 文件不臃肿（<600 MB） — 294.3 MB
+  ✓ 时长 ≤ 314.000 s（赛规硬上限） — 303.000 s
+  ✓ 时长与分镜表一致（±0.30 s） — 303.000 vs 303.000
+  ✓ 1920×1080 — 1920×1080
+  ✓ 视频 H.264 / yuv420p — h264/yuv420p
+  ✓ 24 fps — 24/1
+  ✓ 帧数与分镜表一致（±2） — 7272 vs 7272
+  ✓ 有音频轨
+  ✓ 音频 AAC / 48 kHz / 立体声 — aac 48000 2ch
+  ✓ 音画时长差 ≤ 0.25 s — 302.997 vs 303.000
+  ✓ 码率 2–15 Mbps — 7.77 Mbps
+
+二、单源一致（story.py ↔ 素材 ↔ 文档）
+  ✓ 镜头 id 连续且唯一 — 23 个镜头
+  ✓ 镜头 id 无重复
+  ✓ 引用的图版都在
+  ✓ 没有图版被生成却没用（白名单：unused-sparkplug）
+  ✓ 图版尺寸都是 2400×1350（留 1.25× 推镜余量）
+  ✓ 台词都挂在存在的镜头上
+  ✓ 台词起点落在本镜时长内
+  ✓ 说明卡不越出本镜
+  ✓ 每个音效都有合成函数
+  ✓ 镜头表注释里的片长等于实测片长 — 注释 303 / 实际 303.0
+  ✓ 字幕窗口数与台词+说明卡数一致 — 33 = 29 台词 + 4 说明卡
+
+四、角色一致
+  ✓ 同一角色跨镜头（椭圆头部掩码 NCC ≥ 0.30） — NCC=0.668
+
+五、声音
+  ✓ 音轨文件存在 — C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\build\audio.wav
+  ✓ 48 kHz / 立体声 / 16-bit — 48000 2ch
+  ✓ 音轨长度覆盖全片（±1 s） — 304.5s vs 303.0s
+  ✓ 每条台词都有可测的能量（RMS ≥ 0.02）
+  ✓ 台词明显高于安静段（≥3× 全片 25 分位） — 台词中位 0.113 / 安静段 0.005 = 21.2×
+  ✓ 没有 > 8 s 的死寂 — 最长 0.75s
+  ✓ 整体响度 -16 ± 3 LUFS — -17.5 LUFS
+  ✓ 真峰 ≤ -0.5 dBFS — -2.9 dBFS
+
+六、交付物
+  ✓ 字幕文件存在 — C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\out\zongji.srt
+  ✓ srt 条目数等于字幕窗口数 — 33 vs 33
+  ✓ srt 时间戳合法且递增
+  ✓ production log 存在
+  ✓ log 覆盖三个阶段（前制/制作/后制）
+  ✓ log 点名工具 ImageGen
+  ✓ log 点名工具 edge-tts
+  ✓ log 点名工具 ffmpeg
+  ✓ 视觉图存在 — C:\Users\张一\WorkBuddy\spaces\2026_11_12_22-57-34\_clone-zj2\submission\key-art.jpg
+  ✓ 视觉图 ≥ 1600px 宽 — 1920×1080
+  ✓ synopsis 存在
+  ✓ synopsis 80–280 词 — 257 词
+  ✓ presentation 存在
+  ✓ 提交照抄单存在
+  ✓ 照抄单写明 AI 三阶段
+  ✓ 照抄单写明成片链接栏位
+
+三、画面
+  ✓ 首帧是黑场 — mean=0.00
+  ✓ 片名字卡有字（中心区有亮像素） — 5390 px
+  ✓ 片尾字幕有字 — 12181 px
+  ✓ 字幕烧进画面（抽 8 条） — 8/8 有字幕
+  ✓ 字幕之间确实是空的（抽 8 个空档） — 0/8 误报
+  ✓ 全片单色（R 与 G 中位差 ≤ 6） — max=0.0
+  ✓ 只有 S16 的红纸是红的 — S16=23692 其余最大=216
+  ✓ 满幅无黑边（顶/底 8 行有内容） — top=27.5 bot=24.1
+  ✓ 颗粒在场（相邻帧有差） — 3.52
+  ✓ 推镜在动（首尾 NCC < 0.995） — 0.8040
+  ✓ 全片亮度合理（均 15–90） — mean=48.7 min=25.9 max=89.4
+  ✓ 图版右下无水印字形（水印框锐度 ≤ 3.5） — 最锐 panel-macro = 2.77
+
+合计 61 条，失败 0
+
+全部通过
+EXIT=0
