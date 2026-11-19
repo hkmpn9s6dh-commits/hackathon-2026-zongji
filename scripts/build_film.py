@@ -110,7 +110,7 @@ def main():
          "-shortest", str(final)])
 
     if not a.keep_segs:
-        for i, _, _ in segs:
+        for i, _ in segs:
             (BUILD / f"seg{i}.mp4").unlink(missing_ok=True)
         silent.unlink(missing_ok=True)
 
