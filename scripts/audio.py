@@ -20,6 +20,12 @@ SR = 48000
 TOTAL = sum(s["dur"] for s in S.SHOTS) + 1.5
 N = int(TOTAL * SR)
 
+# 混音配比：台词必须压住音乐床。上一版 voice 0.95 / music 0.42 / duck 0.70 时，
+# 说话的时候比不说话还轻（音乐被压到 30% 后总能量反而下降），听起来像"音乐太响"。
+VOICE_GAIN = 1.25
+MUSIC_GAIN = 0.42
+DUCK = 0.75
+
 VOICE = {
     "xiulan": ("zh-CN-XiaoxiaoNeural", "-6%", "-10Hz"),
     "boy": ("zh-CN-YunxiaNeural", "+6%", "+20Hz"),
@@ -345,7 +351,7 @@ def main():
         p, dur = vo[ln["id"]]
         a = read_wav(p)
         t0 = starts[ln["shot"]] + ln["t"]
-        place(buf, a, t0, 0.95)
+        place(buf, a, t0, VOICE_GAIN)
         spans.append((t0, t0 + dur, ln["id"], dur))
         print(f"  {ln['id']:4s} {ln['shot']} t={ln['t']:5.1f} dur={dur:4.2f}s")
 
@@ -372,9 +378,9 @@ def main():
         act[i:j] = 1.0
     k = int(0.25 * SR)
     act = box_filter(act, k)   # 用 cumsum，不用 np.convolve（O(n·m) 会卡死，AME-1401 犯过一次）
-    duck = 1.0 - 0.70 * np.clip(act, 0, 1)
-    buf[:, 0] += mus * duck * 0.42
-    buf[:, 1] += mus * duck * 0.42
+    duck = 1.0 - DUCK * np.clip(act, 0, 1)
+    buf[:, 0] += mus * duck * MUSIC_GAIN
+    buf[:, 1] += mus * duck * MUSIC_GAIN
 
     # 母带：软限幅 + 峰值归一
     peak = np.abs(buf).max()

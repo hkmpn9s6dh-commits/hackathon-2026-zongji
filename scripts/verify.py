@@ -239,7 +239,7 @@ def check_picture():
         for c0 in cands:
             if c0 < 1 or c0 > TOTAL - 1:
                 continue
-            if any(x <= c0 <= y for x, y in SUBS):
+            if any(a0 <= c0 <= b0 for a0, b0, _ in SUBS):
                 continue
             if all(abs(c0 - c) > 1.5 for c in blanks):
                 blanks.append(c0)
@@ -297,13 +297,19 @@ def check_picture():
        f"mean={np.mean(lum):.1f} min={min(lum):.1f} max={max(lum):.1f}")
 
     # 图版右下角没有工具水印
-    worst_grad = 0.0
+    # 水印是"字形的锐边"。plates.py 对右下角做 9×9 中值 + 高斯，抹掉之后这块应该很平。
+    # 判据用绝对锐度，不用"角落 vs 左边"的比值——board-dead-lamp 右下本来就是一排塞孔，
+    # 比值会到 11.9 却是干净的（截图看过）；这一条吃过一次误报的亏。
+    worst_sharp, worst_name = 0.0, ""
     for p in sorted((ROOT / "plates").glob("*.png")):
         arr = np.asarray(Image.open(p).convert("L"), dtype=np.float32)
         h, w = arr.shape
-        corner = arr[int(h * 0.93):, int(w * 0.86):]
-        worst_grad = max(worst_grad, float(np.abs(np.diff(corner, axis=1)).max()))
-    ok("图版右下无水印字形（梯度 ≤ 24）", worst_grad <= 24, f"max_grad={worst_grad:.1f}")
+        box = arr[int(h * 0.935):, int(w * 0.845):]
+        sharp = float(np.abs(np.diff(box, axis=1)).mean())
+        if sharp > worst_sharp:
+            worst_sharp, worst_name = sharp, p.stem
+    ok("图版右下无水印字形（水印框锐度 ≤ 3.5）", worst_sharp <= 3.5,
+       f"最锐 {worst_name} = {worst_sharp:.2f}")
 
 
 # ---------------------------------------------------------------- 4 角色一致
@@ -346,16 +352,25 @@ def check_audio():
 
     rms = lambda s: float(np.sqrt(np.mean(s ** 2) + 1e-12))
     # 每句台词窗口必须有声，且高于本镜底噪
-    quiet = []
+    quiet, levels = [], []
     for ln in S.LINES:
         if not ln["en"]:
             continue
         t0 = STARTS[ln["shot"]] + ln["t"]
         seg = x[int(t0 * sr):int((t0 + 1.6) * sr)]
-        tail = x[int((t0 + 2.4) * sr):int((t0 + 3.0) * sr)] if t0 + 3.0 < len(x) / sr else seg
-        if rms(seg) < 0.02 or rms(seg) < rms(tail) * 1.6:
-            quiet.append(f'{ln["id"]} {rms(seg):.3f}/{rms(tail):.3f}')
-    ok("每条台词都听得见（RMS > 底噪 1.6×）", not quiet, ", ".join(quiet[:4]))
+        levels.append((ln["id"], rms(seg)))
+        if rms(seg) < 0.02:
+            quiet.append(f'{ln["id"]} {rms(seg):.3f}')
+    ok("每条台词都有可测的能量（RMS ≥ 0.02）", not quiet, ", ".join(quiet[:4]))
+
+    # 台词要高出"安静段"一大截。拿全片 0.5 s 窗的 25 分位当安静底，比拿某一镜的尾巴可靠
+    # （台词常比它所在镜头的尾巴长，用尾巴比会拿台词比台词，曾经误判过一整轮）。
+    w = int(0.5 * sr)
+    env = np.array([rms(x[i:i + w]) for i in range(0, len(x) - w, w)])
+    quiet_floor = float(np.percentile(env, 25))
+    line_med = float(np.median([v for _, v in levels]))
+    ok("台词明显高于安静段（≥3× 全片 25 分位）", line_med >= 3 * quiet_floor,
+       f"台词中位 {line_med:.3f} / 安静段 {quiet_floor:.3f} = {line_med / max(quiet_floor, 1e-6):.1f}×")
 
     # 长静音
     win = int(0.25 * sr)
@@ -372,10 +387,10 @@ def check_audio():
                         "-af", "ebur128=peak=true", "-f", "null", "-"],
                        capture_output=True, text=True)
     txt = r.stderr
-    m = re.search(r"I:\s+(-?\d+\.\d+) LUFS", txt)
-    tp = re.search(r"Peak:\s+(-?\d+\.\d+) dBFS", txt)
-    lufs = float(m.group(1)) if m else -99
-    peak = float(tp.group(1)) if tp else 0
+    ms = re.findall(r"I:\s+(-?\d+\.\d+) LUFS", txt)
+    tp = re.findall(r"Peak:\s+(-?\d+\.\d+) dBFS", txt)
+    lufs = float(ms[-1]) if ms else -99
+    peak = float(tp[-1]) if tp else 0
     ok("整体响度 -16 ± 3 LUFS", abs(lufs + 16) <= 3.0, f"{lufs:.1f} LUFS")
     ok("真峰 ≤ -0.5 dBFS", peak <= -0.5, f"{peak:.1f} dBFS")
 
