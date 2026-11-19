@@ -21,7 +21,8 @@ MAP = {
     "Black_and_white_35mm_film_stil_2026-11-18T21-17-56": "hands-plug",
     "Same_woman__same_face__same_ag_2026-11-18T21-19-35": "her-board-back",
     "Black_and_white_35mm_film_stil_2026-11-18T21-18-49": "window-snow",
-    "Black_and_white_35mm_film_stil_2026-11-18T21-19-03": "laozhou-door",
+    # 旧的那张是欧罗巴面孔（闸 D 评委乙点名），已换；旧 raw 留作对照
+    "Black_and_white_35mm_film_stil_2026-11-19T02-12-09": "laozhou-door",
     "Black_and_white_35mm_film_stil_2026-11-18T21-20-22": "form-seal",
     "Black_and_white_35mm_film_stil_2026-11-18T21-20-35": "headset-hook",
     "Black_and_white_35mm_film_stil_2026-11-18T21-20-49": "unused-sparkplug",
@@ -31,7 +32,8 @@ MAP = {
     "Black_and_white_35mm_film_stil_2026-11-18T21-21-22": "new-exchange",
     "Black_and_white_35mm_film_stil_2026-11-18T21-21-37": "lane-door",
     "Black_and_white_35mm_film_stil_2026-11-18T21-22-06": "mother-doorway",
-    "Black_and_white_35mm_film_stil_2026-11-18T21-22-19": "two-hands",
+    # 旧的那张七八根手指绞在一起（闸 D 点名），已换
+    "Black_and_white_35mm_film_stil_2026-11-19T02-12-37": "two-hands",
     "Black_and_white_35mm_film_stil_2026-11-18T21-22-30": "walk-back",
     "Same_woman__same_face__same_ag_2026-11-18T21-23-03": "headset-hands",
     "Black_and_white_35mm_film_stil_2026-11-18T21-23-19": "board-dawn",
@@ -43,10 +45,11 @@ OFFSET = {
     "her-face-lit": 0.20,
     "hands-plug": 0.55,
     "form-seal": 0.50,
-    "two-hands": 0.55,
+    "two-hands": 0.45,
     "board-dawn": 0.50,
     "board-dead-lamp": 0.50,
     "headset-hook": 0.45,
+    "laozhou-door": 0.24,
     "door-speak": 0.45,
     "walk-back": 0.40,
 }
